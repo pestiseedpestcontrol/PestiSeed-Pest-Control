@@ -1,0 +1,1250 @@
+<style>
+/* ================================
+   PESTISEED MOUSE CONTROL BLOG
+   ================================ */
+
+.pestiseed-blog {
+    --primary: #1f6b45;
+    --primary-dark: #164d32;
+    --primary-light: #eaf5ef;
+    --accent: #f4b942;
+    --text: #26332d;
+    --muted: #66736c;
+    --border: #dfe7e2;
+    --light: #f7faf8;
+    --white: #ffffff;
+    --shadow: 0 8px 30px rgba(25, 55, 40, 0.08);
+
+    max-width: 1050px;
+    margin: 40px auto;
+    padding: 0 20px;
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* Main article */
+
+.pestiseed-blog .blog-content {
+    background: var(--white);
+}
+
+/* Hero */
+
+.pestiseed-blog .blog-hero {
+    background: linear-gradient(135deg, #164d32, #267a50);
+    color: #fff;
+    padding: 55px 45px;
+    border-radius: 18px;
+    margin-bottom: 45px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+}
+
+.pestiseed-blog .blog-hero::after {
+    content: "🐭";
+    position: absolute;
+    right: 40px;
+    bottom: -15px;
+    font-size: 120px;
+    opacity: 0.12;
+}
+
+.pestiseed-blog .blog-label {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.25);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.pestiseed-blog h1 {
+    color: #fff;
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.15;
+    margin: 0 0 18px;
+    max-width: 800px;
+}
+
+.pestiseed-blog .hero-intro {
+    color: rgba(255,255,255,0.9);
+    font-size: 19px;
+    line-height: 1.7;
+    max-width: 820px;
+    margin: 0;
+}
+
+/* Intro */
+
+.pestiseed-blog .intro-box {
+    background: var(--primary-light);
+    border-left: 5px solid var(--primary);
+    padding: 25px 30px;
+    border-radius: 10px;
+    margin: 30px 0 45px;
+}
+
+.pestiseed-blog .intro-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Headings */
+
+.pestiseed-blog h2 {
+    color: var(--primary-dark);
+    font-size: 32px;
+    line-height: 1.3;
+    margin: 60px 0 22px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+}
+
+.pestiseed-blog h3 {
+    color: #245d42;
+    font-size: 23px;
+    line-height: 1.4;
+    margin: 38px 0 15px;
+}
+
+.pestiseed-blog p {
+    margin: 0 0 20px;
+}
+
+.pestiseed-blog strong {
+    color: var(--primary-dark);
+}
+
+/* Tables */
+
+.pestiseed-blog .table-wrapper {
+    overflow-x: auto;
+    margin: 30px 0 40px;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.pestiseed-blog table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.pestiseed-blog th {
+    background: var(--primary);
+    color: #fff;
+    text-align: left;
+    padding: 16px 18px;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.pestiseed-blog td {
+    padding: 15px 18px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    font-size: 15px;
+}
+
+.pestiseed-blog tr:nth-child(even) td {
+    background: var(--light);
+}
+
+.pestiseed-blog tr:last-child td {
+    border-bottom: none;
+}
+
+/* Lists */
+
+.pestiseed-blog ol,
+.pestiseed-blog ul {
+    margin: 20px 0 30px;
+    padding-left: 28px;
+}
+
+.pestiseed-blog li {
+    margin-bottom: 13px;
+    padding-left: 5px;
+}
+
+/* Numbered inspection steps */
+
+.pestiseed-blog .inspection-list {
+    counter-reset: inspection;
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+.pestiseed-blog .inspection-list li {
+    counter-increment: inspection;
+    position: relative;
+    padding: 18px 20px 18px 65px;
+    margin-bottom: 12px;
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+}
+
+.pestiseed-blog .inspection-list li::before {
+    content: counter(inspection);
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+/* Visual placeholder */
+
+.pestiseed-blog .visual-box {
+    background: #f8faf9;
+    border: 2px dashed #b8c9bf;
+    border-radius: 14px;
+    padding: 25px 28px;
+    margin: 35px 0;
+    color: #53635a;
+}
+
+.pestiseed-blog .visual-box strong {
+    color: var(--primary-dark);
+}
+
+/* Safety / warning box */
+
+.pestiseed-blog .warning-box {
+    background: #fff8e7;
+    border-left: 5px solid var(--accent);
+    padding: 23px 27px;
+    border-radius: 10px;
+    margin: 30px 0;
+}
+
+.pestiseed-blog .warning-box strong {
+    color: #805c00;
+}
+
+/* Information cards */
+
+.pestiseed-blog .info-card {
+    background: var(--light);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px 28px;
+    margin: 25px 0;
+    box-shadow: 0 4px 18px rgba(25,55,40,0.04);
+}
+
+.pestiseed-blog .info-card h3 {
+    margin-top: 0;
+}
+
+/* Comparison section */
+
+.pestiseed-blog .comparison-intro {
+    background: linear-gradient(135deg, #f1f8f4, #ffffff);
+    border: 1px solid #d9e8df;
+    border-radius: 14px;
+    padding: 25px 28px;
+    margin: 25px 0 30px;
+}
+
+/* CTA */
+
+.pestiseed-blog .final-cta {
+    background: linear-gradient(135deg, #164d32, #287b51);
+    color: #fff;
+    border-radius: 18px;
+    padding: 45px 40px;
+    margin: 65px 0 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.pestiseed-blog .final-cta h2 {
+    color: #fff;
+    border: none;
+    padding: 0;
+    margin: 0 0 18px;
+    font-size: 34px;
+}
+
+.pestiseed-blog .final-cta p {
+    color: rgba(255,255,255,0.92);
+    max-width: 750px;
+    margin: 0 auto 25px;
+}
+
+.pestiseed-blog .cta-button {
+    display: inline-block;
+    background: var(--accent);
+    color: #26332d !important;
+    padding: 14px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.25s ease;
+}
+
+.pestiseed-blog .cta-button:hover {
+    transform: translateY(-2px);
+    opacity: 0.92;
+}
+
+/* Links */
+
+.pestiseed-blog a {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.pestiseed-blog a:hover {
+    color: var(--primary-dark);
+}
+
+/* Small note */
+
+.pestiseed-blog .note {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .pestiseed-blog {
+        margin: 20px auto;
+        padding: 0 14px;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .pestiseed-blog .blog-hero {
+        padding: 35px 25px;
+        border-radius: 14px;
+    }
+
+    .pestiseed-blog .blog-hero::after {
+        font-size: 75px;
+        right: 15px;
+        bottom: 0;
+    }
+
+    .pestiseed-blog h1 {
+        font-size: 34px;
+    }
+
+    .pestiseed-blog .hero-intro {
+        font-size: 17px;
+    }
+
+    .pestiseed-blog h2 {
+        font-size: 27px;
+        margin-top: 45px;
+    }
+
+    .pestiseed-blog h3 {
+        font-size: 21px;
+    }
+
+    .pestiseed-blog .intro-box,
+    .pestiseed-blog .warning-box,
+    .pestiseed-blog .info-card {
+        padding: 20px;
+    }
+
+    .pestiseed-blog .final-cta {
+        padding: 35px 22px;
+    }
+
+    .pestiseed-blog .final-cta h2 {
+        font-size: 28px;
+    }
+
+}
+
+/* Very small phones */
+
+@media (max-width: 480px) {
+
+    .pestiseed-blog {
+        padding: 0 10px;
+    }
+
+    .pestiseed-blog .blog-hero {
+        padding: 30px 20px;
+    }
+
+    .pestiseed-blog h1 {
+        font-size: 29px;
+    }
+
+    .pestiseed-blog h2 {
+        font-size: 25px;
+    }
+
+    .pestiseed-blog h3 {
+        font-size: 20px;
+    }
+}
+</style>
+
+
+<div class="pestiseed-blog">
+
+    <article class="blog-content">
+
+        <!-- HERO -->
+        <header class="blog-hero">
+
+            <span class="blog-label">Toronto Mouse Control Guide</span>
+
+            <h1>How Mice Enter Toronto Homes During Fall and Winter</h1>
+
+            <p class="hero-intro">
+                Learn where mice enter Toronto homes, why fall and winter increase
+                mouse activity, how to identify entry points, and how to prevent
+                mice from getting inside again.
+            </p>
+
+        </header>
+
+
+        <!-- INTRO -->
+
+        <div class="intro-box">
+
+            <p>
+                Mice enter Toronto homes through gaps in foundations, doors,
+                garages, pipes, vents, siding and rooflines. A house mouse can
+                squeeze through an opening only about 6 mm wide. Fall and winter
+                make warm, sheltered buildings attractive, though mice can enter
+                any time.
+            </p>
+
+            <p>
+                The place where mice enter is often not the place you see them.
+                Exterior gaps and indoor travel routes often differ, so each needs
+                its own inspection. First, find the active access points, and check
+                whether mice already live inside. Then combine sealing with careful
+                mouse control, because sealing alone cannot remove mice indoors.
+                Homeowners should read this guide fully before they seal anything
+                at home.
+            </p>
+
+        </div>
+
+
+        <!-- SECTION -->
+
+        <h2>Where Do Mice Enter Toronto Houses?</h2>
+
+        <p>
+            Most mouse entry points sit within reach of a careful homeowner at
+            ground level. Use the table below as a quick map before you walk the
+            property. Some openings connect straight to rooms, while others lead
+            only into hidden voids.
+        </p>
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Entry Point</th>
+                        <th>Where to Inspect</th>
+                        <th>Possible Route Inside</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Foundation and sill plate</td>
+                        <td>Foundation to framing junction</td>
+                        <td>Basement and wall voids</td>
+                    </tr>
+
+                    <tr>
+                        <td>Utility penetrations</td>
+                        <td>AC lines, pipes and cables</td>
+                        <td>Interior wall cavities</td>
+                    </tr>
+
+                    <tr>
+                        <td>Garage doors</td>
+                        <td>Bottom seal and corners</td>
+                        <td>Garage, storage and adjacent rooms</td>
+                    </tr>
+
+                    <tr>
+                        <td>Exterior doors</td>
+                        <td>Thresholds and weatherstripping</td>
+                        <td>Main floor</td>
+                    </tr>
+
+                    <tr>
+                        <td>Brick weep holes</td>
+                        <td>Brick veneer drainage openings</td>
+                        <td>Wall cavity, where connected</td>
+                    </tr>
+
+                    <tr>
+                        <td>Dryer and exhaust vents</td>
+                        <td>Damaged covers and openings</td>
+                        <td>Duct or adjacent voids</td>
+                    </tr>
+
+                    <tr>
+                        <td>Basement windows</td>
+                        <td>Frames and window wells</td>
+                        <td>Basement</td>
+                    </tr>
+
+                    <tr>
+                        <td>Soffits and roof returns</td>
+                        <td>Damaged fascia and roof junctions</td>
+                        <td>Attic</td>
+                    </tr>
+
+                    <tr>
+                        <td>Deck and addition joints</td>
+                        <td>Concealed framing junctions</td>
+                        <td>Crawl spaces and walls</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <h2>Foundation Cracks and Gaps Along the Sill Plate</h2>
+
+        <p>
+            Concrete and masonry shift slowly as Toronto soil freezes and thaws
+            each year. That movement can open thin cracks where the concrete
+            foundation meets the wooden frame. The sill plate is the wood board
+            that rests on top of the foundation. Any gap under or beside it can
+            lead mice into basement ceiling voids. Crumbling mortar joints near
+            the ground give mice another easy way into wall cavities. Check the
+            outside edge first, because gaps here often hide behind soil and plants.
+        </p>
+
+
+        <h2>Gaps Around Plumbing, Gas, Electrical and AC Lines</h2>
+
+        <p>
+            Every pipe or cable that crosses an outside wall needs a hole cut for
+            it. Installers often leave a ring shaped gap between the pipe and the
+            wall. Air conditioner line sets and gas meters often hide these gaps
+            behind equipment. Inside, the same gaps open into wall cavities behind
+            kitchen and bathroom plumbing. Never open gas, electrical or mechanical
+            equipment, and call a licensed tradesperson for repairs.
+        </p>
+
+
+        <h2>Garage Door Bottom Seals and Exterior Door Thresholds</h2>
+
+        <p>
+            A closed garage door still leaves a thin gap along the bottom edge.
+            Rubber seals harden in cold weather, then crack and shrink after several
+            winters. Uneven concrete creates larger gaps, especially at the two
+            bottom corners of the door. Stand inside the garage on a bright day and
+            look for any daylight. Mice that enter here can reach the house through
+            the door to the garage. Exterior door thresholds fail the same way when
+            sweeps wear thin or frames shift.
+        </p>
+
+
+        <h2>Brick Weep Holes, Siding Gaps and Wall Cavities</h2>
+
+        <p>
+            Brick veneer walls have a row of small slots near the bottom, called
+            weep holes. These slots let trapped water drain out of the gap behind
+            the brick. Mice can enter that gap through them, but it does not always
+            reach rooms. Never fill weep holes with mortar or caulk, because trapped
+            water damages the wall. Use stainless steel weep hole guards that let
+            water and air pass through. Siding gaps and brick joints are not drainage
+            paths, so you can close them.
+        </p>
+
+
+        <h2>Dryer Vents, Exhaust Openings and Basement Windows</h2>
+
+        <p>
+            Dryer and bath fan covers often crack, bend or lose their small flaps.
+            A damaged cover gives mice a short, warm tunnel into ducts and nearby
+            voids. Basement window frames also shrink, crack and pull away from
+            the foundation over time. Window wells collect leaves, which give mice
+            cover while they test the frame. Do not cover a dryer vent with fine
+            mesh, because lint clogs it quickly. A blocked vent raises fire risk,
+            so choose a guard the dryer maker approves.
+        </p>
+
+
+        <h2>Roof Soffits, Fascia and Attic Vent Openings</h2>
+
+        <p>
+            Mice climb well, and rough brick, downspouts and cables all work as
+            ladders. They can reach soffits, fascia boards, roof returns and attic
+            vents from the wall. Tree branches near the roof also give them a quick
+            bridge to the house. So an inspection that stops at eye level will miss
+            these high gaps. Use binoculars from the ground, and never climb a roof
+            or ladder alone. Leave rooftop checks to professionals who carry proper
+            fall protection and safety gear.
+        </p>
+
+
+        <div class="visual-box">
+
+            <strong>Visual Recommendation</strong>
+
+            <p>
+                An original annotated Toronto house exterior with numbered markers
+                on each entry point. Use one colour for confirmed openings with
+                fresh signs nearby. Use a second colour for potential openings that
+                still need checking.
+            </p>
+
+        </div>
+
+
+        <h2>Why Do Mice Enter Toronto Homes More Often During Fall and Winter?</h2>
+
+
+        <h3>How Falling Temperatures Change Mouse Shelter Seeking Behaviour</h3>
+
+        <p>
+            Mice feel the cold more than larger animals, because their small bodies
+            lose heat fast. By October, Toronto nights turn cold, and wind and rain
+            make open ground harsh. Seeds and insects also become scarcer outdoors,
+            so mice search for steadier food nearby. Snow cover hides remaining food
+            and removes the shelter that tall grass once gave. A warm house offers
+            heat, dry nesting spots and less wind in one place.
+        </p>
+
+
+        <h3>Why Attached Garages, Basements and Wall Voids Provide Winter Shelter</h3>
+
+        <p>
+            Garages, basements and wall voids share three traits that mice value
+            highly in winter. They stay quiet, they hold heat, and they contain
+            soft materials for nests. Stored cardboard, old fabric and paper boxes
+            quickly turn into ready made bedding for mice. Insulated walls keep
+            nests warm, while people stay busy in other parts of the house. Pet
+            food or birdseed stored in a garage adds a reliable meal near that shelter.
+        </p>
+
+
+        <h3>Why Mice Can Remain Active Inside Throughout Winter</h3>
+
+        <p>
+            House mice do not hibernate, so they stay busy inside your home all
+            winter long. A female mouse can become pregnant again very soon after
+            giving birth indoors. Pregnancy lasts about three weeks, and young mice
+            mature within a couple of months. So a few mice in November can become
+            a much larger crowd by spring. Watch for fresh droppings, night noises
+            and chewed food packages during the coldest months.
+        </p>
+
+
+        <h2>Can Mice Enter a Toronto Home in Summer Too?</h2>
+
+        <p>
+            Yes, mice can enter a Toronto home in spring, summer or any other
+            season. Construction, landscaping and garden changes can push mice
+            toward buildings in warm months. Two different problems exist here,
+            and homeowners often confuse them with each other. One is seasonal
+            movement, where outdoor mice move into the building as weather cools.
+            The other is an indoor population that settled earlier and keeps
+            breeding all year. Sealing helps the first problem, but the second
+            needs trapping and monitoring too.
+        </p>
+
+
+        <h2>How Can You Tell Where Mice Are Actually Getting In?</h2>
+
+
+        <div class="info-card">
+
+            <h3>Fresh Droppings, Gnaw Marks and Grease Marks Near Openings</h3>
+
+            <p>
+                Fresh droppings look dark, soft and shiny, while old ones look grey
+                and dry. Mouse droppings are small and rice shaped, usually near
+                three to six millimetres long. Gnaw marks show fresh pale wood, and
+                grease marks show dark smudges along edges. Grease marks come from
+                oils on their fur as they rub past surfaces. One sign alone does not
+                confirm the entry point, because mice travel far inside walls. Look
+                for several signs together near the same gap before you trust your
+                guess.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>Mouse Tracks and Repeated Movement Along Walls</h3>
+
+            <p>
+                Mice follow walls and repeat the same paths, which leaves faint
+                trails over time. A thin layer of flour or baby powder can reveal
+                footprints and tail drags. Put it in a shallow tray or strip along
+                a wall, away from food. Check the powder each morning with a
+                flashlight held low to the floor. Do not blow on the dust or sweep
+                it dry, because dust can carry germs. Photograph the marks, then
+                wipe the area with a damp towel while wearing gloves.
+            </p>
+
+        </div>
+
+
+        <div class="info-card">
+
+            <h3>Scratching in Walls vs Mice Entering Through the Roof</h3>
+
+            <p>
+                Sound tells you where mice travel, but not always where they came
+                in. Light scratching in walls at night often points to mice moving
+                between floors. Sounds above the ceiling may come from the attic,
+                yet the opening could be low. Mice can enter at the foundation and
+                climb inside the wall to the attic. Heavy thumping, daytime noise
+                or loud chewing suggests squirrels, raccoons or rats instead.
+                Wildlife needs different handling, so ask a qualified professional
+                to identify the animal.
+            </p>
+
+        </div>
+
+
+        <h2>How to Inspect the Exterior of a Toronto Home Step by Step</h2>
+
+        <ol class="inspection-list">
+
+            <li>
+                Walk the outside of your home in daylight with a flashlight and
+                gloves. Stay on the ground and keep away from gas meters, wiring
+                and mechanical equipment.
+            </li>
+
+            <li>
+                Inspect the foundation perimeter for cracks, soil gaps and damaged
+                mortar near the ground.
+            </li>
+
+            <li>
+                Check utility penetrations and the attached garage, including side
+                seals and bottom corners.
+            </li>
+
+            <li>
+                Examine doors, windows and vents for worn sweeps, torn screens and
+                loose covers.
+            </li>
+
+            <li>
+                Inspect brick, siding and visible roof junctions from the ground
+                using binoculars.
+            </li>
+
+            <li>
+                Photograph suspicious gaps and any droppings, rub marks or gnawed
+                material you find.
+            </li>
+
+            <li>
+                Check the matching interior area, such as the basement wall or
+                under the sink.
+            </li>
+
+            <li>
+                Arrange further inspection for inaccessible or uncertain locations,
+                rather than guessing.
+            </li>
+
+            <li>
+                Label each gap <strong>confirmed</strong> if fresh signs exist
+                nearby, and <strong>potential</strong> if they do not.
+            </li>
+
+        </ol>
+
+
+        <h2>Which Toronto Home Types Are Most Vulnerable to Mouse Entry?</h2>
+
+        <p>
+            Toronto has many building styles, and each style has its own weak spots.
+            This section describes common building features, and it makes no claims
+            about any neighbourhood.
+        </p>
+
+
+        <h3>Older Brick and Semi Detached Toronto Houses</h3>
+
+        <p>
+            Older brick houses often have worn mortar joints, settled foundations
+            and decades of repairs. Each renovation can add new pipes, wires or
+            ducts through the original walls. Those added holes are not always
+            sealed as tightly as they should be. Semi detached homes share a party
+            wall, so cavities may connect between neighbours. Neighbours should
+            talk early, because one sealed home can push mice toward the other.
+        </p>
+
+
+        <h3>Newer Townhouses and Attached Garages</h3>
+
+        <p>
+            Newer townhouses have tighter walls, but they still have many
+            construction joints and seams. Builders run pipes, wires and ducts
+            through shared floors, walls and service chases. Gaps around these
+            runs can sometimes link one unit to the next unit. Attached garages
+            add door seals, expansion joints and side doors that wear quickly.
+            Start with the garage, because it connects the outdoors to the living
+            space.
+        </p>
+
+
+        <h3>Basement Apartments and Multi Unit Rental Properties</h3>
+
+        <p>
+            Basement apartments sit at the lowest level, where mice often find
+            gaps first. Pipes, drains and laundry lines cross walls and ceilings
+            shared with other areas. In multi unit buildings, shared garbage rooms
+            and service shafts can feed several homes. Ontario's Residential
+            Tenancies Act requires landlords to keep rental units in good repair.
+            Tenants should report mouse problems in writing and keep dated copies
+            of every request. Coordinated inspections work best, because treating
+            one unit alone often leaves mice in neighbouring spaces.
+        </p>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Property Type</th>
+                        <th>Vulnerable Structural Features</th>
+                        <th>Inspection Priority</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Older brick house</td>
+                        <td>Worn mortar, settled foundation, added utility lines</td>
+                        <td>Foundation perimeter and service penetrations</td>
+                    </tr>
+
+                    <tr>
+                        <td>Semi detached house</td>
+                        <td>Shared party wall, connected cavities</td>
+                        <td>Basement walls and shared wall junctions</td>
+                    </tr>
+
+                    <tr>
+                        <td>Newer townhouse</td>
+                        <td>Garage seals, construction joints, service chases</td>
+                        <td>Garage doors and utility entries</td>
+                    </tr>
+
+                    <tr>
+                        <td>Basement apartment</td>
+                        <td>Low level gaps, plumbing penetrations</td>
+                        <td>Windows, pipe entries and laundry areas</td>
+                    </tr>
+
+                    <tr>
+                        <td>Multi unit rental</td>
+                        <td>Shared risers, garbage rooms, common spaces</td>
+                        <td>Common areas and coordinated unit checks</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <h2>How to Seal Mouse Entry Points Without Creating Other Building Problems</h2>
+
+
+        <h3>Which Materials Work for Mouse Exclusion?</h3>
+
+        <p>
+            Good exclusion materials are hard, durable and tough for small teeth
+            to chew. Stainless steel mesh and galvanized hardware cloth with
+            quarter inch openings suit larger gaps. Sheet metal flashing covers
+            damaged corners, and cement mortar repairs cracks in masonry and
+            concrete. Copper mesh packed into small holes resists rust better
+            than plain steel wool.
+        </p>
+
+        <p>
+            Use exterior grade sealant only to lock metal in place, not as the
+            barrier. Expanding foam alone fails, because mice chew soft foam and
+            can tunnel through it. Pest management guidance from University of
+            California IPM also warns against relying on soft fillers. Rodent
+            resistant door sweeps with metal or firm brush edges seal gaps under
+            doors.
+        </p>
+
+
+        <div class="warning-box">
+
+            <strong>Important:</strong>
+
+            <p>
+                Some openings serve an important ventilation or drainage function.
+                Do not block functional vents, exhaust outlets or brick weep holes.
+                Use appropriate guards and follow manufacturer and local requirements.
+            </p>
+
+        </div>
+
+
+        <h3>Which Openings Should Never Be Completely Blocked?</h3>
+
+        <p>
+            Some openings protect your home, so mouse guards must never stop their
+            job. Never fully block brick weep holes, dryer vents, bath fan outlets
+            or furnace exhausts. High efficiency furnaces and water heaters often
+            use plastic pipes for intake and exhaust. Blocking those pipes can cause
+            carbon monoxide to build up inside your home. In Ontario, ask a licensed
+            gas technician about any guard near fuel burning appliances. Always
+            follow the appliance maker's instructions and local building rules for
+            every vent guard.
+        </p>
+
+
+        <h3>Should You Seal Entry Points While Mice Are Still Inside?</h3>
+
+        <p>
+            Sealing too early can trap live mice inside walls, floors or attic
+            spaces. Trapped mice may die in places you cannot reach, which causes
+            strong odours. First, confirm whether mice live inside by checking
+            fresh droppings and night activity. If activity is present, start
+            trapping before you close the main entry points. Some professionals
+            seal in stages, keeping one monitored route open until trapping ends.
+            After traps stop catching mice, seal the last route and keep monitoring
+            for weeks.
+        </p>
+
+
+        <h3>Why Mice Return After Poorly Sealed Repairs</h3>
+
+        <p>
+            Mice return when a repair leaves even one small gap open somewhere
+            nearby. They also chew weak materials, loosen sealant and widen cracks
+            over several weeks. Freeze and thaw cycles can pull caulk away from
+            brick, wood and concrete. Mice that stayed inside the walls can also
+            find a new way out and in. Food left in garages and basements keeps
+            them close and interested in your property. Inspect every repair again
+            after two to four weeks to catch these failures.
+        </p>
+
+
+        <div class="visual-box">
+
+            <strong>Visual Recommendation</strong>
+
+            <p>
+                A material comparison chart in three columns. Column one shows
+                suitable barriers such as steel mesh, sheet metal and mortar.
+                Column two shows unsuitable materials such as foam alone and plain
+                caulk. Column three shows functional openings, such as weep holes
+                and dryer vents, that need specialized guards.
+            </p>
+
+        </div>
+
+
+        <h2>What Should You Do If Mice Have Already Entered Your House?</h2>
+
+
+        <h3>Confirm Whether the Infestation Is Active</h3>
+
+        <p>
+            Do not assume mice are active just because you found a few old
+            droppings. Clean the area safely, then watch for new droppings over
+            three to five nights. Place monitoring stations or snap traps in safe
+            spots along walls, away from children. Repeat sightings, fresh gnawing
+            and caught mice all confirm that the problem is active. Write down
+            dates and locations, because this record helps any professional who
+            visits later.
+        </p>
+
+
+        <h3>Reduce Accessible Food, Water and Nesting Materials</h3>
+
+        <p>
+            Mice need very little food, so small leftovers can keep them alive for
+            weeks. Store pantry items, pet food and birdseed in glass, metal or
+            thick plastic bins. Use garbage bins with tight lids, and take kitchen
+            waste out each night. Fix leaking taps and wipe wet sink areas, because
+            mice also need regular water. Replace cardboard storage boxes with
+            plastic bins, and clear clutter from basements and garages. Move
+            woodpiles and dense plants a short distance away from the foundation
+            when possible.
+        </p>
+
+
+        <h3>Coordinate Mouse Control With Exterior Exclusion</h3>
+
+        <p>
+            Good control uses three steps together: reduce mice, close entry points
+            and monitor results. Snap traps and enclosed trap stations catch mice
+            when placed along their travel routes. Check traps every day, and wear
+            gloves whenever you handle them or caught mice. In Canada, Health
+            Canada's PMRA registers rodenticides, and each label sets strict
+            directions for use. Tamper resistant bait stations help protect
+            children and pets, so professionals should place them. No plan removes
+            every mouse overnight, so expect several weeks of follow up checks.
+        </p>
+
+
+        <h3>Handle Mouse Droppings and Contaminated Materials Safely</h3>
+
+        <p>
+            Mouse droppings can carry germs, so careful cleanup matters far more
+            than speed. Health Canada guidance links rodent droppings to illness
+            risk when dust gets into the air. Never dry sweep or vacuum droppings,
+            because both actions lift dust into the air. Air out the room for 30
+            minutes, then wear rubber gloves and a fitted mask. Spray droppings
+            with disinfectant until wet, wait five minutes, then wipe with paper
+            towels. Seal waste in a bag, wash your hands well, and discard
+            contaminated food.
+        </p>
+
+
+        <div class="warning-box">
+
+            <strong>Heavy contamination:</strong>
+
+            <p>
+                Heavy contamination, such as soiled attic insulation, needs a
+                specialist assessment before cleanup.
+            </p>
+
+        </div>
+
+
+        <p>
+            For a full control plan, read Pestiseed's broader mice control guide
+            before you begin.
+        </p>
+
+
+        <h2>DIY Mouse Proofing vs Professional Mouse Exclusion in Toronto</h2>
+
+        <div class="comparison-intro">
+
+            <p>
+                The right choice depends on risk, access and how long mice have
+                been active. Use the table below to see where each approach fits
+                best in real homes.
+            </p>
+
+        </div>
+
+
+        <div class="table-wrapper">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Decision Factor</th>
+                        <th>DIY</th>
+                        <th>Professional Service</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Visible door seal gap</td>
+                        <td>Often manageable</td>
+                        <td>Optional</td>
+                    </tr>
+
+                    <tr>
+                        <td>Small accessible non utility crack</td>
+                        <td>Sometimes manageable</td>
+                        <td>Suitable</td>
+                    </tr>
+
+                    <tr>
+                        <td>Roofline or concealed entry</td>
+                        <td>Difficult or unsafe</td>
+                        <td>Preferred</td>
+                    </tr>
+
+                    <tr>
+                        <td>Repeated mouse activity</td>
+                        <td>Limited without full diagnosis</td>
+                        <td>Recommended</td>
+                    </tr>
+
+                    <tr>
+                        <td>Shared walls or multi unit property</td>
+                        <td>Requires coordination</td>
+                        <td>Often preferable</td>
+                    </tr>
+
+                    <tr>
+                        <td>Contaminated insulation</td>
+                        <td>Higher safety complexity</td>
+                        <td>Specialist assessment</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <h3>When Can a Homeowner Handle Mouse Proofing?</h3>
+
+        <p>
+            A homeowner can handle low risk jobs that need no ladder or special
+            tools. Replacing a worn door sweep or garage bottom seal is a good
+            example. Small, visible cracks in masonry away from utilities also
+            suit careful DIY repair. Storing food properly and clearing clutter
+            are easy tasks that help every household. Call a professional if you
+            find several gaps or fresh droppings.
+        </p>
+
+
+        <h3>When Should You Hire a Mouse Control Professional?</h3>
+
+        <p>
+            Hire a professional when signs keep returning after you have tried
+            basic steps. Persistent droppings, constant noises and damaged attic
+            insulation point to a bigger problem. Multiple entry points, roofline
+            gaps and openings near utilities also need trained eyes. Shared walls
+            and multi unit buildings require coordination that one homeowner
+            cannot easily manage. A trained technician can also judge whether
+            sealing should wait until trapping ends.
+        </p>
+
+
+        <h3>What Should a Toronto Mouse Inspection Include?</h3>
+
+        <p>
+            A strong inspection starts outside and covers the foundation, garage,
+            utilities and visible roofline. Inside, the inspector should check
+            basements, attics, kitchens and areas with recent activity. Good
+            reports include photos of each entry point and a clear map of mouse
+            activity. You should also receive control recommendations, an
+            exclusion scope and a written quote. Ask about follow up visits,
+            monitoring plans and any limits on the service. Not every company
+            offers every service, so confirm each detail before you book.
+        </p>
+
+
+        <h2>How to Prevent Mice From Entering Again Next Fall</h2>
+
+
+        <h3>Late Summer and Early Fall Exterior Inspection</h3>
+
+        <p>
+            Inspect your home in August or September, well before Toronto nights
+            turn cold. This timing gives you weeks to repair gaps without rushing
+            in bad weather. Test garage seals, check vent covers and look at mortar
+            and caulk condition. Trim branches that touch the roof, and clear tall
+            plants from the foundation edge. Book any roof or high repairs early,
+            because contractors often get busy in autumn.
+        </p>
+
+
+        <h3>Garage, Basement and Food Storage Maintenance</h3>
+
+        <p>
+            Garages and basements need a short checking routine every month during
+            cold weather. Keep pet food and birdseed in sealed metal bins, stored
+            well off the floor. Shelves raise stored items and let you see droppings
+            along the wall edges easily. Swap cardboard boxes for plastic bins, and
+            keep firewood outside, away from walls. Repair leaks quickly, and check
+            door thresholds whenever you notice daylight at the edges.
+        </p>
+
+
+        <h3>Winter Monitoring After Exclusion</h3>
+
+        <p>
+            A quiet home does not always prove that the mice are truly gone. Mice
+            are mostly active at night, so you may never see one directly. Check
+            traps, monitoring stations and nontoxic tracking powder once a week
+            through the winter. Record the date, the location and what you found
+            during each check. Look closely at sealed areas for fresh gnawing, new
+            droppings or loose repair materials.
+        </p>
+
+
+        <h3>When to Reinspect Repairs</h3>
+
+        <p>
+            Recheck repairs after any event that can move or damage your building
+            envelope. Renovations, new utility work, siding repairs and vent
+            replacements can create fresh gaps. Severe storms and freeze and thaw
+            cycles can also crack mortar and loosen seals. Inspect again whenever
+            you notice new droppings, new gnawing or unusual night noises. A yearly
+            professional review adds a second opinion on repairs you cannot reach.
+        </p>
+
+
+        <!-- FINAL CTA -->
+
+        <section class="final-cta">
+
+            <h2>Stop Mice From Entering Your Toronto Home</h2>
+
+            <p>
+                Recurring mice, unknown entry points and seasonal activity can wear
+                down any household. You do not have to guess where mice are getting
+                into your home. <strong>Pestiseed Pest Control</strong> can inspect
+                your Toronto property and explain what the signs mean.
+            </p>
+
+            <p>
+                You can then receive control recommendations that match what the
+                inspection actually finds.
+            </p>
+
+            <a class="cta-button" href="https://pestiseed.ca/">
+                Request a Professional Mouse Assessment
+            </a>
+
+        </section>
+
+    </article>
+
+</div>
